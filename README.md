@@ -1,6 +1,6 @@
 # Treasure Hunt GPT
 
-Treasure Hunt Admin Bot, written on top of [Langchain](https://github.com/hwchase17/langchain) and GPT 3.5, for a Treasure Hunt that I organised. See [this notebook](Treasure Hunt.ipynb) to see the bot in action, including the prompts used to direct it.
+Treasure Hunt Admin Bot, written on top of [Langchain](https://github.com/hwchase17/langchain) and GPT 3.5, for a Treasure Hunt that I organised. See [this notebook](<Treasure Hunt.ipynb>) to see the bot in action, including the prompts used to direct it.
 
 Frontend (with screenshots) lives [here](https://github.com/rubenvereecken/treasurehunt-frontend)
 
