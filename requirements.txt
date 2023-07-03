@@ -1,0 +1,9 @@
+langchain==0.0.202
+langchainplus-sdk==0.0.10
+urllib3==1.26.16
+fastapi==0.97.0
+mangum==0.17.0
+boto3==1.26.164
+openai==0.27.8
+openapi-schema-pydantic==1.2.4
+pydantic==1.10.9

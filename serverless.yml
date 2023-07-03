@@ -1,0 +1,49 @@
+org: ruben20tech
+app: treasure-hunt
+service: treasure-hunt
+
+frameworkVersion: "3"
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+# I'm using the dotenv plugin, so no need for built-in .env resolution
+useDotenv: false
+
+provider:
+  name: aws
+  runtime: python3.9
+  enviroment:
+    # .env is automatically loaded
+  # httpApi:
+  #   # Allows all domains
+  #   cors:
+  #     allowedOrigins:
+  #       - http://localhost:3000
+  #       - https://ruben30.com
+  #     # allowedHeaders:
+  #     #   - Content-Type
+  #     #   - Authorization
+  #     # allowCredentials: true
+  #     # exposedResponseHeaders:
+  #     #   - Special-Response-Header
+  #     # maxAge: 6000 # In seconds
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+  serverless-offline:
+    prefix: ""
+    # We don't care about /dev etc
+    noPrependStageInUrl: true
+
+functions:
+  api:
+    handler: app.handler
+    events:
+      - httpApi:
+          method: "*"
+          path: /{proxy+}
+    timeout: 20
